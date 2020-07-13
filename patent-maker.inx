@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<inkscape-extension xmlns="http://www.inkscape.org/namespace/inkscape/extension">
+  <_name>Patent Maker</_name>
+  <id>org.inkscape.effect.patentmaker</id>
+  <!-- mention a dependency here and will check for existence (optional)-->
+	<dependency type="executable" location="inx">patent-maker.py</dependency>
+
+  <param name="patenturl" type="string" _gui-text="Patent URL" >https://patents.google.com/?q=cricut&oq=cricut
+  </param>
+  
+  <effect>
+    <object-type>all</object-type>
+    	<effects-menu>
+		<submenu _name="Custom Extensions"/> <!-- which menu under Extensions -->
+		</effects-menu>
+  </effect>
+
+	<script>
+    <command location="inx" interpreter="python">patent-maker.py</command>
+
+	</script>
+
+</inkscape-extension>
